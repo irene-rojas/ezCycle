@@ -9,10 +9,24 @@
     margin-bottom: 0px;
     overflow: hidden;
     display: block;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(101, 101, 101);
+}
+
+#wrapper-heading{
+    margin-top: -18px;
+    padding-top: -20px;
+    margin-bottom: -10px;
+    font-weight: bold;
+}
+
+#wrapper-subheading{
+
+   font-size: 20px;
 }
 
 
-.btn-primary{
+.btn{
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
@@ -21,8 +35,14 @@
     font-weight: bold;
     border: none;
     background-color: lightsalmon;
+    color: white;
+
+    -webkit-box-shadow: -7px 11px 25px -5px rgb(75, 75, 75);
+    -moz-box-shadow: -7px 11px 25px -5px rgb(75, 75, 75);
+    box-shadow: -7px 11px 25px -5px rgb(73, 73, 73);
+    border-radius: 1rem;
 }
 
-.btn-primary:hover{
+.btn:hover{
     background-color: rgb(254, 125, 74);
 }

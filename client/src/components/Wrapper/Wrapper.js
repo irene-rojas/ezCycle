@@ -4,13 +4,11 @@ import "./Wrapper.css";
 const Wrapper = () => (
 
     <div className="jumbotron">
-        <div className="row">
-            <div className="col-md-12">
-                <h1 className="text-center">ezCycle</h1>
-                <h2>Recycling done easy. We find centers for you!</h2>
-                <button className="btn btn-primary">SUBMIT</button>
-            </div>
-        </div>
+        
+                <h1 className="text-center" id="wrapper-heading">ezCycle</h1>
+                <h2 id="wrapper-subheading">RECYCLING DONE EASY IN YOUR NEIGHBORHOOD</h2>
+                <button className="btn">RECYCLE NOW</button>
+            
     </div>
 
 )
