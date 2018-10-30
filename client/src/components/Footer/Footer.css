@@ -16,7 +16,8 @@
     text-align: left;
 }
 
-.btn-primary{
+
+.btn{
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
@@ -27,7 +28,7 @@
     background-color: lightsalmon;
 }
 
-.btn-primary:hover{
+.btn:hover{
     background-color: rgb(254, 125, 74);
 }
 
