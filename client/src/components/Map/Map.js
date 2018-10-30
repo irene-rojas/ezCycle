@@ -1,13 +1,32 @@
-import React, { Component } from "react";
-import "./NavMessage.css";
+import React from "react";
+// import "./Map.css";
+import L from "leaflet";
 
-// NavMessage renders an li tag containing an message for the user
 
-class Map extends Component {
+
+class Map extends React.Component {
 //   state = {
 //     message: "",
 //     animating: false
 //   };
+//not totallly sure what the map state will be here, probably manipulated 
+
+componentDidMount() {
+    // create map
+    this.map = L.map('map', {
+      center: [49.8419, 24.0315],
+      zoom: 16,
+      layers: [
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }),
+      ]
+    });
+  }
+  render() {
+    return <div id="map"></div>
+  }
+}
 
 //   componentDidUpdate({ score, topScore }, prevState) {
 //     const newState = { animating: true };
@@ -36,16 +55,16 @@ class Map extends Component {
 //     }
 //   };
 
-  render() {
-    return (
-      <li
-        className={this.state.animating ? this.state.message : ""}
-        onAnimationEnd={() => this.setState({ animating: false })}
-      >
-        {this.renderMessage()}
-      </li>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <li
+//         className={this.state.animating ? this.state.message : ""}
+//         onAnimationEnd={() => this.setState({ animating: false })}
+//       >
+//         {this.renderMessage()}
+//       </li>
+//     );
+//   }
+// }
 
-export default NavMessage;
+export default Map;
