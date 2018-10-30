@@ -3,7 +3,7 @@ const db = require("../models");
 
 mongoose.connect(
     process.env.MONGODB_URI ||
-    "mongodb://localhost/ezCycleDB"
+    "mongodb://localhost/ezCycleDB", { useNewUrlParser: true }
   );
 
 const ezCycleSeed = [
@@ -27,11 +27,18 @@ const ezCycleSeed = [
     {
         name: "Arlington Environmental Collection and Recycling Event (E-CARE)",
         address: "1425 N Quincy St, Arlington, VA 22201",
+        zipCode: 22201,
         days: "Nov. 17, 2018: 8:30 a.m. - 1 p.m.",
         url: "https://recycling.arlingtonva.us/household-hazmat/e-care/",
         lat: 38.889079,
         long: -77.107540,
-        notes: "Proof of residency is required"
+        notes: "Proof of residency is required\nFee for CRT",
+        rechargeableBatteries: true,
+        crt: true,
+        tvLCD: true,
+        computers: true,
+        tabletsPhones: true,
+        wires: true
     },
     {
         name: "Quarterly Recycling Day (Town of Vienna, VA)",
