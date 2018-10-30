@@ -17,7 +17,9 @@ const Footer = () => (
                     
 
 
+
                     <button className="btn">SUBMIT</button>
+
                 </div>
 
             </div>
