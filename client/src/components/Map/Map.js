@@ -1,7 +1,12 @@
-// import React from 'react';
-import React, { Component } from "react";
-
+import React, { Component } from 'react'
+// import { Map, TileLayer, Marker, Popup } from '../../src'
 import L from 'leaflet';
+
+
+// // import React from 'react';
+// import React, { Component } from "react";
+
+// import L from 'leaflet';
 
 
 const style = {
@@ -44,22 +49,3 @@ class Map extends Component {
 }
 export default Map;
 
-
-
-// import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
-
-// const Map = ReactMapboxGl({
-//     accessToken: 'pk.eyJ1IjoiZmFicmljOCIsImEiOiJjaWc5aTV1ZzUwMDJwdzJrb2w0dXRmc2d0In0.p6GGlfyV-WksaDV_KdN27A'
-//   });
-//   class App extends React.Component {
-//     render() {
-//       return (
-//         <Map
-//           style="mapbox://styles/username/hash"
-//           containerStyle={{ width: '100vw', height: '100vh'}}
-//         />
-//       );
-//     }
-//   }
-
-// export default Map;
