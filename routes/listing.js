@@ -7,8 +7,7 @@ router.route("/")
 //   .post(listingController.findAll);
 
 // Matches with "/listing/:zipcode"
-router
-  .route("/:zipcode")
+router.route("/:zipcode")
   .get(listingController.findByZipcode)
 
 module.exports = router;
