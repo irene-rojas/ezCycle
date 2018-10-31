@@ -34,7 +34,7 @@ const ezCycleSeed = [
         url: "https://recycling.arlingtonva.us/household-hazmat/e-care/",
         lat: 38.889079,
         long: -77.107540,
-        notes: "Proof of residency is required\nFee for CRT",
+        notes: "Proof of residency is required\nCRT fees: televisions - $20 and computer monitors - $15",
         rechargeableBatteries: true,
         crt: true,
         tvLCD: true,
@@ -455,7 +455,6 @@ const ezCycleSeed = [
         notes: "Near Teavana and AT&T",
         tabletsPhones: true,
     }
-    
 ];
 
 db.Listing
