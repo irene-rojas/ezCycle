@@ -40,7 +40,8 @@ const ezCycleSeed = [
         tvLCD: true,
         computers: true,
         tabletsPhones: true,
-        wires: true
+        wires: true,
+        homeAppliances: false
     },
     {
         // 3
@@ -53,10 +54,12 @@ const ezCycleSeed = [
         long: -77.271173,
         notes: "No CRT TVs or screens",
         rechargeableBatteries: true,
+        crt: false,
         tvLCD: true,
         computers: true,
         tabletsPhones: true,
-        wires: true
+        wires: true,
+        homeAppliances: false
     },
     {
         // 4
@@ -73,7 +76,8 @@ const ezCycleSeed = [
         tvLCD: true,
         computers: true,
         tabletsPhones: true,
-        wires: true 
+        wires: true,
+        homeAppliances: false
     },
     {
         // 5
@@ -86,6 +90,8 @@ const ezCycleSeed = [
         long: -77.434076,
         notes: " ",
         rechargeableBatteries: true,
+        crt: false,
+        tvLCD: false,
         computers: true,
         tabletsPhones: true,
         wires: true,
@@ -101,9 +107,12 @@ const ezCycleSeed = [
         long: -77.169664,
         notes: "Limit three items per household per day.",
         rechargeableBatteries: true,
+        crt: false,
+        tvLCD: false,
         computers: true,
         tabletsPhones: true,
         wires: true,
+        homeAppliances: false
     },
     {
         // 6
@@ -116,9 +125,12 @@ const ezCycleSeed = [
         long: -77.131091,
         notes: "Limit three items per household per day.",
         rechargeableBatteries: true,
+        crt: false,
+        tvLCD: false,
         computers: true,
         tabletsPhones: true,
         wires: true,
+        homeAppliances: false
     },
     {
         // 7
@@ -131,9 +143,12 @@ const ezCycleSeed = [
         long: -77.050365,
         notes: "Limit three items per household per day.",
         rechargeableBatteries: true,
+        crt: false,
+        tvLCD: false,
         computers: true,
         tabletsPhones: true,
         wires: true,
+        homeAppliances: false
     },
     {
         // 8
@@ -146,9 +161,12 @@ const ezCycleSeed = [
         long: -77.058307,
         notes: "Limit three items per household per day.",
         rechargeableBatteries: true,
+        crt: false,
+        tvLCD: false,
         computers: true,
         tabletsPhones: true,
         wires: true,
+        homeAppliances: false
     },
     {
         // 9
@@ -161,9 +179,12 @@ const ezCycleSeed = [
         long: -77.080347,
         notes: "Limit three items per household per day.",
         rechargeableBatteries: true,
+        crt: false,
+        tvLCD: false,
         computers: true,
         tabletsPhones: true,
         wires: true,
+        homeAppliances: false
     },
     {
         // 10
@@ -176,9 +197,12 @@ const ezCycleSeed = [
         long: -77.033887,
         notes: "Limit three items per household per day.",
         rechargeableBatteries: true,
+        crt: false,
+        tvLCD: false,
         computers: true,
         tabletsPhones: true,
         wires: true,
+        homeAppliances: false
     },
     {
         // 11
@@ -191,9 +215,12 @@ const ezCycleSeed = [
         long: -77.396105,
         notes: "Limit three items per household per day.",
         rechargeableBatteries: true,
+        crt: false,
+        tvLCD: false,
         computers: true,
         tabletsPhones: true,
         wires: true,
+        homeAppliances: false
     },
     {
         // 12
@@ -206,9 +233,12 @@ const ezCycleSeed = [
         long: -77.295141,
         notes: "Limit three items per household per day.",
         rechargeableBatteries: true,
+        crt: false,
+        tvLCD: false,
         computers: true,
         tabletsPhones: true,
         wires: true,
+        homeAppliances: false
     },
     {
         // 13
@@ -224,7 +254,9 @@ const ezCycleSeed = [
         crt: true,
         tvLCD: true,
         computers: true,
-        tabletsPhones: true
+        tabletsPhones: true,
+        wires: false,
+        homeAppliances: false
     },
     {
         // 14
@@ -240,7 +272,9 @@ const ezCycleSeed = [
         crt: true,
         tvLCD: true,
         computers: true,
-        tabletsPhones: true
+        tabletsPhones: true,
+        wires: false,
+        homeAppliances: false
     },
     {
         // 15
@@ -256,7 +290,9 @@ const ezCycleSeed = [
         crt: true,
         tvLCD: true,
         computers: true,
-        tabletsPhones: true
+        tabletsPhones: true,
+        wires: false,
+        homeAppliances: false
     },
     {
         // 16
@@ -272,7 +308,9 @@ const ezCycleSeed = [
         crt: true,
         tvLCD: true,
         computers: true,
-        tabletsPhones: true
+        tabletsPhones: true,
+        wires: false,
+        homeAppliances: false
     },
     {
         // 17
@@ -288,7 +326,9 @@ const ezCycleSeed = [
         crt: true,
         tvLCD: true,
         computers: true,
-        tabletsPhones: true
+        tabletsPhones: true,
+        wires: false,
+        homeAppliances: false
     },
     {
         // 18
@@ -304,7 +344,9 @@ const ezCycleSeed = [
         crt: true,
         tvLCD: true,
         computers: true,
-        tabletsPhones: true
+        tabletsPhones: true,
+        wires: false,
+        homeAppliances: false
     },
     {
         // 19
@@ -357,7 +399,8 @@ const ezCycleSeed = [
         tvLCD: true,
         computers: true,
         tabletsPhones: true,
-        wires: true
+        wires: true,
+        homeAppliances: false
     },
     {
         // 22
@@ -405,7 +448,13 @@ const ezCycleSeed = [
         lat: 38.774256,
         long: -77.175152,
         notes: "1st Level near JC Penny",
+        rechargeableBatteries: false,
+        crt: false,
+        tvLCD: false,
+        computers: false,
         tabletsPhones: true,
+        wires: false,
+        homeAppliances: false
     },
     {
         // 25
@@ -417,7 +466,13 @@ const ezCycleSeed = [
         lat: 38.918059,
         long: -77.221548,
         notes: "Near AMC Theaters",
+        rechargeableBatteries: false,
+        crt: false,
+        tvLCD: false,
+        computers: false,
         tabletsPhones: true,
+        wires: false,
+        homeAppliances: false
     },
     {
         // 26
@@ -429,7 +484,13 @@ const ezCycleSeed = [
         lat: 38.643551,
         long: -77.295376,
         notes: "Near Burlington Coat Factory",
+        rechargeableBatteries: false,
+        crt: false,
+        tvLCD: false,
+        computers: false,
         tabletsPhones: true,
+        wires: false,
+        homeAppliances: false
     },
     {
         // 27
@@ -441,7 +502,13 @@ const ezCycleSeed = [
         lat: 38.648839,
         long: -77.297105,
         notes: "Inside Walmart near GMV exit vestibule",
+        rechargeableBatteries: false,
+        crt: false,
+        tvLCD: false,
+        computers: false,
         tabletsPhones: true,
+        wires: false,
+        homeAppliances: false
     },
     {
         // 28
@@ -453,7 +520,13 @@ const ezCycleSeed = [
         lat: 38.862857,
         long: -77.358770,
         notes: "Near Teavana and AT&T",
+        rechargeableBatteries: false,
+        crt: false,
+        tvLCD: false,
+        computers: false,
         tabletsPhones: true,
+        wires: false,
+        homeAppliances: false
     }
 ];
 
