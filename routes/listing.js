@@ -1,17 +1,27 @@
 const router = require("express").Router();
-const listingController = require("../controllers/listingController");
+const db = require("../models");
 
-// Matches with "/listing"
-router.route("/")
-   .get(listingController.findAll)
-  //  console.log("Find all",listingController.findAll)
-  
+//Define Methods of controlling and accessing the Listing DB via the functions findAll and findByZipCode. 
+
+// Home route that finds and displays all entries on the map leaflet
+router.get("/a", function(req, res) {
+        db.Listing
+            .find()
+            .then(function (dbModel) { res.json(dbModel)})
+            .catch(err => res.status(422).json(err));
+            
+});
+//     findByZipCode: function(req,res) {
+//         console.log("Find All Res:",res)
+//         db.Listing
+//             .findByZipCode(req.params.zipCode)
+//             .then(dbModel => res.json(dbModel))
+//             console.log ("Find by zip Code:", dbModel)
+//             .catch(err => res.status(422).json(err));
 
 // Matches with "/listing/:zipcode"
 // router.route("/:zipcode")
 //   .get(listingController.findByZipcode)
-  // console.log("Find by Zip code",listingController.findByZipCode)
-
-  
+// console.log("Find by Zip code",listingController.findByZipCode) 
 
 module.exports = router;

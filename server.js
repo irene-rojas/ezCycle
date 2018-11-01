@@ -7,9 +7,9 @@ const mongoose = require('mongoose');
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
   const path = require('path');
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client/build/index.html'));
-  });
+  // app.get('/', (req, res) => {
+  //   res.sendFile(path.resolve(__dirname, 'client/build/index.html'));
+  // });
 }
 
 //Mongo Connection
@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/recycling", { u
 
 //Hook Express up to routes
 const routes = require("./routes");
-app.use(routes);
+  app.use(routes);
 
 //Server Start and Listen Verification
 const PORT = process.env.PORT || 3001;

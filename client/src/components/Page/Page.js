@@ -10,13 +10,26 @@ import Cards from "../Cards";
 import Facts from "../Facts";
 //import footer section
 import Footer from "../Footer";
+import API from "../../utils/api"
 
 
 // import './Page.css';
 
 class Page extends Component {
 
-
+  //function that calls the Api
+  componentDidMount() {
+    this.findAll();
+  }
+  
+  findAll = () => {
+    API.findAll()
+    .then(res1 =>
+      // this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+      console.log(res1)
+    )
+    .catch(err => console.log(err));
+  };
 
   render() {
     return (
