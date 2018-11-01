@@ -1,11 +1,12 @@
 //import React 
 import React, { Component } from 'react';
 //import wrapper section
-import Wrapper from "../Wrapper";
+// import Wrapper from "../Wrapper";
 // //import cards section
 import Cards from "../Cards";
 // //import container section
 // import Map from "../Map";
+import Carte from "../Carte";
 // //import facts section
 import Facts from "../Facts";
 //import footer section
@@ -24,9 +25,8 @@ class Page extends Component {
         <Wrapper />
         <Cards />
         <Facts />
-        {/* <Map /> */}
+        <Carte />
         <Footer />
-
       </div>
     );
   }
