@@ -1,0 +1,28 @@
+.world{
+    height: 500px;
+    width: 450px;
+    margin-top: 10px;
+}
+
+.facts{
+    background-color: rgba(221, 221, 221, 0.966);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: rgb(15, 160, 160);
+    font-size: 20px;
+}
+
+#facts-heading{
+    color: rgb(91, 91, 91);
+    font-size: 50px; 
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.orangeText{
+    color: lightsalmon;
+}
+
+#source{
+    font-size: 12px;
+}
