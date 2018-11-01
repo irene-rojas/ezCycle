@@ -10,8 +10,6 @@ const Wrapper = () => (
                 <button className="btn">RECYCLE NOW</button>
             
     </div>
-
-
 )
 
 export default Wrapper;
