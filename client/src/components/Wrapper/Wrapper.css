@@ -18,6 +18,8 @@
     padding-top: -20px;
     margin-bottom: -10px;
     font-weight: bold;
+    letter-spacing: .1ch;
+
 }
 
 #wrapper-subheading{
@@ -45,4 +47,5 @@
 
 .btn:hover{
     background-color: rgb(254, 125, 74);
+    color: white;
 }

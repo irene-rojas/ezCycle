@@ -4,16 +4,21 @@ const db = require("../models");
 //functions findAll and findByZipCode. 
 module.exports = {
     findAll: function(req, res) {
+        // console.log("Find All Res:",db.Listing);
         db.Listing
-            .find(req.query)
-            .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
-    },
-    findByZipCode: function(req,res) {
-        db.Listing
-            .findByZipCode(req.params.zipCode)
-            .then(dbModel => res.json(dbModel))
+            .find({})
+            .then(function(dbModel){
+                // console.log(dbModel);
+                res.json(dbModel);
+            })
+            // console.log ("Find All:", dbModel)
             .catch(err => res.status(422).json(err));
     }
-};
-
+//     findByZipCode: function(req,res) {
+//         console.log("Find All Res:",res)
+//         db.Listing
+//             .findByZipCode(req.params.zipCode)
+//             .then(dbModel => res.json(dbModel))
+//             console.log ("Find by zip Code:", dbModel)
+//             .catch(err => res.status(422).json(err));
+    }
