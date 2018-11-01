@@ -10,6 +10,7 @@ import Cards from "../Cards";
 import Facts from "../Facts";
 //import footer section
 import Footer from "../Footer";
+import Form from "../Form";
 
 // import './Page.css';
 
@@ -24,6 +25,7 @@ class Page extends Component {
         <Cards />
         <Facts />
         {/* <Map /> */}
+        <Form />
         <Footer />
       </div>
     );
