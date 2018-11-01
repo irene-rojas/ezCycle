@@ -512,11 +512,11 @@ export default class Carte extends Component {
             id= "mapbox.streets"
             accessToken="pk.eyJ1Ijoibm9taW5iIiwiYSI6ImNqbTk4enhqdTBkazEzcG4xMnF2d2hhMHUifQ.FR4IlfSjVgCaXe4MtqsomQ"
         />
-        <Marker position={position}>
+        {/* <Marker position={position}>
           <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
           </Popup>
-        </Marker>
+        </Marker> */}
         {/* {API.map(API => (
             <Marker
               position={[API.lat, API.long]}
@@ -526,7 +526,13 @@ export default class Carte extends Component {
             <Marker
               position={[ezCycleSeed.lat, ezCycleSeed.long]}
             //   icon={iconMarker}
-              />))}
+              >
+              <Popup>
+              <div class="popupDiv">`Bikes Available: {ezCycleSeed.lat} Docks Available: {ezCycleSeed.long} `</div>
+          </Popup>
+              </Marker>))}
+              
+              
       </Map>
     //   </div>
     )
