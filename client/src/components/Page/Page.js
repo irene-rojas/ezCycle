@@ -11,6 +11,7 @@ import Facts from "../Facts";
 //import footer section
 import Footer from "../Footer";
 
+
 // import './Page.css';
 
 class Page extends Component {
@@ -25,6 +26,7 @@ class Page extends Component {
         <Facts />
         {/* <Map /> */}
         <Footer />
+
       </div>
     );
   }
