@@ -465,7 +465,7 @@ export default class Carte extends Component {
     lat: 38.995719,
     lng: -77.038405,
     zoom: 13,
-    ezCycleSeedsArray: ezCycleSeeds
+    ezCycleSeedsArray: ezCycleSeeds //when API is connected, this will 
   }
 
 
@@ -528,7 +528,12 @@ export default class Carte extends Component {
             //   icon={iconMarker}
               >
               <Popup>
-              <div class="popupDiv">`Bikes Available: {ezCycleSeed.lat} Docks Available: {ezCycleSeed.long} `</div>
+              {/* <div class="popupDiv">`Bikes Available: {ezCycleSeed.name} Docks Available: {ezCycleSeed.long} `</div> */}
+              <div class="popupDiv" ><b>Name:</b> {ezCycleSeed.name} <br></br>
+              <b>Address:</b> {ezCycleSeed.address}<br></br>
+              <b>Hours:</b> {ezCycleSeed.days}<br></br>
+              <b> Notes:</b> {ezCycleSeed.notes}<br></br>
+              <b>Link:</b> <a href={ezCycleSeed.url} target="blank" >{ezCycleSeed.url}</a></div>
           </Popup>
               </Marker>))}
               
