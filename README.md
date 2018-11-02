@@ -1,3 +1,4 @@
+
 # ezCycle - eRecycling Done Easy in Your Neighborhood
 
 By [Irene Rojas](https://github.com/irene-rojas),[Lauren McDonough](https://github.com/Lmcdono1), [Leah Oubouzar](https://github.com/LOubouzar), and [Madeline Hanley](https://github.com/mhanley00).
