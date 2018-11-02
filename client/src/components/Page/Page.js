@@ -1,7 +1,7 @@
 //import React 
 import React, { Component } from 'react';
 //import wrapper section
-// import Wrapper from "../Wrapper";
+import Wrapper from "../Wrapper";
 // //import cards section
 import Cards from "../Cards";
 // //import container section
