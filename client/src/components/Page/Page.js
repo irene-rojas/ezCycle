@@ -10,13 +10,15 @@ import Cards from "../Cards";
 import Facts from "../Facts";
 //import footer section
 import Footer from "../Footer";
-import API from "../../utils/api"
+import API from "../../utils/api";
 
 
 // import './Page.css';
 
 class Page extends Component {
-
+state ={
+  listings: []
+};
   //function that calls the Api
   componentDidMount() {
     this.findAll();
@@ -24,9 +26,9 @@ class Page extends Component {
   
   findAll = () => {
     API.findAll()
-    .then(res1 =>
-      // this.setState({ books: res.data, title: "", author: "", synopsis: "" })
-      console.log(res1)
+    .then(res =>
+      this.setState({ listings: res}),
+      // console.log(req.data)
     )
     .catch(err => console.log(err));
   };

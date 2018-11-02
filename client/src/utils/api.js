@@ -1,12 +1,12 @@
 import axios from "axios";
 
 export default {
-  // Gets all Listing
+  // Gets all Listing on the home route
   findAll: function() {
-    return axios.get("/listing/a");
+    return axios.get("/");
   },
   // Gets the book with the given id
-  findByZipCode: function(id) {
-    return axios.get("/listing/" + id);
+  findByZipCode: function(zipCode) {
+    return axios.get("/zipcode/" + zipCode);
   },
 };
