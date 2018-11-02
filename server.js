@@ -15,61 +15,36 @@ if (process.env.NODE_ENV === "production") {
 }
 
 //Mongo Connection
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/recycling", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/ezCycleDB", { useNewUrlParser: true });
 
+//Sends all seed data to /listing server port
+app.get("/listing", function (req, res) {
+  db.Listing.find({})
+      .then(function (listingData) {
+          res.json(listingData)
+      })
+      .catch(function (err) {
+          res.json(err);
+      });
+});
+
+// //Routing for API for Listing Front End
+// router.route("/listing").get(findAll(req, res) {
+//     db.Listing.find(req.query)
+//       .then(listingData => res.json(listingData))
+//       .catch(err => res.status(422).json(err))
+// });
+
+// // Matches with "/listing/:zipcode"
+// router.route("/listing/:zipcode").get(findByZipCode(req, res) {
+//     db.Listing.findById(req.params.zipCode)
+//       .then(listingData => res.json(listingData))
+//       .catch(err => res.status(422).json(err))
+  
+// });
+  
 //Server Start and Listen Verification
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, function () {
   console.log(`ezCycle server now listening on PORT ${PORT}!`)
 });
-
-
-//Define Methods of controlling and accessing the Listing DB via the functions findAll and findByZipCode. 
-
-// Home route that finds and displays all entries on the map leaflet
-app.route('/').get(function (req, res) {
-  db.Listing
-    .find(req.query)
-    console.log(req.query)
-    console.log(res)
-    .then(dbModel => res.json(dbModel))
-    .catch(err => res.status(422).json(err));
-  res.send(dbModel);
-})
-
-
-app.route('/zipCode').get(function (req, res) {
-  db.Listing
-    .find(req.query)
-    .then(dbModel => res.json(dbModel))
-    .catch(err => res.status(422).json(err));
-  res.send(dbModel);
-})
-
-
-
-// // Matches with "/api/books"
-// router.route("/")
-//   .get(booksController.findAll)
-
-// // Matches with "/api/books/:zipCode"
-// router.use(function(req, res) {
-//   res.sendFile(path.join(__dirname, "../client/public/index.html"));
-// });
-
-// router
-//   .route("/:zipCode")
-//   .get(booksController.findByZipCode)
-
-// findAll: function(req, res) {
-//   db.Listing
-//     .find(req.query)
-//     .then(dbModel => res.json(dbModel))
-//     .catch(err => res.status(422).json(err));
-// },
-// findByZipCode: function(req, res) {
-//   db.Listing
-//     .findById(req.params.id)
-//     .then(dbModel => res.json(dbModel))
-//     .catch(err => res.status(422).json(err));
-// }

@@ -28,7 +28,7 @@ state ={
     API.findAll()
     .then(res =>
       this.setState({ listings: res}),
-      // console.log(req.data)
+      console.log(this.state.listings)
     )
     .catch(err => console.log(err));
   };

@@ -10,7 +10,7 @@
 //   },
 //   findByZipCode: function(req, res) {
 //     db.Listing
-//       .findById(req.params.id)
+//       .findById(req.params.zipCode)
 //       .then(dbModel => res.json(dbModel))
 //       .catch(err => res.status(422).json(err));
 //   }
