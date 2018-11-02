@@ -1,0 +1,59 @@
+.footer{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    background: rgba(245, 245, 245, 0.966);
+    color: rgb(91, 91, 91);
+    font-family: 'Roboto', sans-serif;
+
+}
+
+#about-connect{
+    text-align: left;
+}
+
+#contact-connect{
+    text-align: left;
+}
+
+.btn{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    background-color: lightsalmon;
+}
+
+.btn:hover{
+
+    background-color: rgb(254, 125, 74);
+}
+
+#copyright{
+    margin-top: 5%;
+    margin-bottom: -4%;
+
+}
+
+
+/* .form {
+    background-color: white;
+    text-align: center;
+    border-radius: 1em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  } */
+
+
+.social{
+    height: 50px;
+    width: 50px;
+}
+
+hr {
+   color:  rgb(199, 199, 199);
+   border-top: 1px solid !important;
+}
