@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
 import L from 'leaflet';
+
 // import API from "../../utils/API"; //WILL NEED THIS FROM OUR OWN API ONCE SET UP
 // type State = {
 //   lat: number,
@@ -505,6 +506,7 @@ export default class Carte extends Component {
       zoom={this.state.zoom}
       style={{height: "700px"}}
       >
+
         <TileLayer
           url="https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}"
             attribution='Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
@@ -529,14 +531,20 @@ export default class Carte extends Component {
               >
               <Popup>
               {/* <div class="popupDiv">`Bikes Available: {ezCycleSeed.name} Docks Available: {ezCycleSeed.long} `</div> */}
-
               <div class="popupDiv" >
               <b>Name:</b> {ezCycleSeed.name} <br></br>
               <b>Address:</b> {ezCycleSeed.address}<br></br>
               <b>Hours:</b> {ezCycleSeed.days}<br></br>
               <b>Notes:</b> {ezCycleSeed.notes}<br></br>
-
-              <b>Link:</b> <a href={ezCycleSeed.url} target="blank" >{ezCycleSeed.url}</a></div>
+              <b>Recycles:</b> <br></br>
+              Rechargeable Batteries: {ezCycleSeed.rechargeableBatteries ? "Yes" : "No"}<br></br>
+              Phones + Tablets: {ezCycleSeed.tabletsPhones ? "Yes" : "No"}<br></br>
+              LCD Screens: {ezCycleSeed.tvLCD ? "Yes" : "No"}<br></br>
+              Computers: {ezCycleSeed.computers ? "Yes" : "No"}<br></br>
+              Wires: {ezCycleSeed.wires ? "Yes" : "No"}<br></br>
+              Cathode Ray Tubes: {ezCycleSeed.crt ? "Yes" : "No"}<br></br>
+              Home Appliances: {ezCycleSeed.homeAppliances ? "Yes" : "No"}<br></br>
+              <b><a href={ezCycleSeed.url} target="blank" >Visit site</a></b></div>
           </Popup>
               </Marker>))}
               
@@ -546,8 +554,6 @@ export default class Carte extends Component {
     )
   }
 }
-
-
 
 // import React, { Component } from "react";
 // // import { render } from "react-dom";

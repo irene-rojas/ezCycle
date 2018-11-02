@@ -11,7 +11,7 @@ import Carte from "../Carte";
 import Facts from "../Facts";
 //import footer section
 import Footer from "../Footer";
-
+import Filter from "../Filter";
 
 // import './Page.css';
 
@@ -25,6 +25,7 @@ class Page extends Component {
         <Wrapper />
         <Cards />
         <Facts />
+        <Filter/>
         <Carte />
         <Footer />
       </div>
