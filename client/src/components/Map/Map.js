@@ -1,7 +1,12 @@
-// import React from 'react';
-import React, { Component } from "react";
-
+import React, { Component } from 'react'
+// import { Map, TileLayer, Marker, Popup } from '../../src'
 import L from 'leaflet';
+
+
+// // import React from 'react';
+// import React, { Component } from "react";
+
+// import L from 'leaflet';
 
 
 const style = {
@@ -10,11 +15,14 @@ const style = {
   };
 
 class Map extends Component {
-  componentDidMount() {
-    // create map
+  
+
+  
+    componentDidMount() {
+    // create map, cred to Andrew Cherniavskii for helping me  https://medium.com/@cherniavskii/creating-leaflet-maps-in-react-apps-e2750372d6d6
     this.map = L.map('map', {
       center: [38.995719, -77.038405],
-      zoom: 16,
+      zoom: 12,
       layers: [
         L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -27,6 +35,13 @@ class Map extends Component {
     // add marker
 //   this.marker = L.marker(this.props.markerPosition).addTo(this.map);
   }
+
+//   componentDidUpdate({ markerPosition }) {
+//     // check if position has changed
+//     if (this.props.markerPosition !== markerPosition) {
+//       this.marker.setLatLng(this.props.markerPosition);
+//     }
+//   }
   render() {
     return <div id="map" style={style} />;
 
@@ -34,22 +49,3 @@ class Map extends Component {
 }
 export default Map;
 
-
-
-// import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
-
-// const Map = ReactMapboxGl({
-//     accessToken: 'pk.eyJ1IjoiZmFicmljOCIsImEiOiJjaWc5aTV1ZzUwMDJwdzJrb2w0dXRmc2d0In0.p6GGlfyV-WksaDV_KdN27A'
-//   });
-//   class App extends React.Component {
-//     render() {
-//       return (
-//         <Map
-//           style="mapbox://styles/username/hash"
-//           containerStyle={{ width: '100vw', height: '100vh'}}
-//         />
-//       );
-//     }
-//   }
-
-// export default Map;
