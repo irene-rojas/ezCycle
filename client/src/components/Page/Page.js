@@ -6,21 +6,17 @@ import Wrapper from "../Wrapper";
 import Cards from "../Cards";
 // //import container section
 // import Map from "../Map";
+import Carte from "../Carte";
 // //import facts section
 import Facts from "../Facts";
-//import Form section
-import Form from "../Form";
-
+//import footer section
+import Footer from "../Footer";
+import Filter from "../Filter";
 
 // import './Page.css';
 
 class Page extends Component {
 
-  
-  // handleFormSubmit(event) {
-  //   alert('New location submitted!');
-  //   event.preventDefault();
-  // }
 
 
   render() {
@@ -29,15 +25,13 @@ class Page extends Component {
         <Wrapper />
         <Cards />
         <Facts />
-        {/* <Map /> */}
-        <Form 
-        
-        />
-
+        <Filter/>
+        <Carte />
+        <Footer />
       </div>
     );
   }
-};
+}
 
 
 
