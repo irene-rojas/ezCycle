@@ -529,11 +529,13 @@ export default class Carte extends Component {
               >
               <Popup>
               {/* <div class="popupDiv">`Bikes Available: {ezCycleSeed.name} Docks Available: {ezCycleSeed.long} `</div> */}
+
               <div class="popupDiv" >
               <b>Name:</b> {ezCycleSeed.name} <br></br>
               <b>Address:</b> {ezCycleSeed.address}<br></br>
               <b>Hours:</b> {ezCycleSeed.days}<br></br>
               <b>Notes:</b> {ezCycleSeed.notes}<br></br>
+
               <b>Link:</b> <a href={ezCycleSeed.url} target="blank" >{ezCycleSeed.url}</a></div>
           </Popup>
               </Marker>))}
