@@ -463,9 +463,9 @@ const ezCycleSeeds = [
 
 export default class Carte extends Component {
   state = {
-    lat: 38.995719,
-    lng: -77.038405,
-    zoom: 13,
+    lat: 38.815805,
+    lng: -77.138255,
+    zoom: 11,
     ezCycleSeedsArray: ezCycleSeeds //when API is connected, this will 
   }
 
