@@ -39,6 +39,21 @@
 }
 
 
-#form {
-    max-width: 400px;
-  }
+/* .form {
+    background-color: white;
+    text-align: center;
+    border-radius: 1em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  } */
+
+
+.social{
+    height: 50px;
+    width: 50px;
+}
+
+hr {
+   color:  rgb(199, 199, 199);
+   border-top: 1px solid !important;
+}

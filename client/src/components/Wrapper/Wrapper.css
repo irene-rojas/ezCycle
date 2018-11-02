@@ -48,3 +48,8 @@
     background-color: rgb(254, 125, 74);
     color: white;
 }
+
+.btn:focus {
+    outline: none;
+    color: white;
+  }

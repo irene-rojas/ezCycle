@@ -8,14 +8,19 @@ import Cards from "../Cards";
 // import Map from "../Map";
 // //import facts section
 import Facts from "../Facts";
-//import footer section
-import Footer from "../Footer";
+//import Form section
 import Form from "../Form";
+
 
 // import './Page.css';
 
 class Page extends Component {
 
+  
+  // handleFormSubmit(event) {
+  //   alert('New location submitted!');
+  //   event.preventDefault();
+  // }
 
 
   render() {
@@ -25,12 +30,14 @@ class Page extends Component {
         <Cards />
         <Facts />
         {/* <Map /> */}
-        <Form />
-        <Footer />
+        <Form 
+        
+        />
+
       </div>
     );
   }
-}
+};
 
 
 

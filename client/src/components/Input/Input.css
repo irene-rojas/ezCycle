@@ -1,3 +1,15 @@
 .input-group{
     width: 300px;
+    text-align: center;
+    border-radius: 3em;
+    
+}
+
+.input-group-md{
+    text-align: center !important;
+    border-radius: 3em !important;
+}
+
+.form-control{
+    border-radius: 3em;
 }
