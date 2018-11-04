@@ -5,7 +5,7 @@ import Wrapper from "../Wrapper";
 // //import cards section
 import Cards from "../Cards";
 // //import container section
-// import Map from "../Map";
+import Map from "../Map";
 // //import facts section
 import Facts from "../Facts";
 //import footer section
@@ -18,20 +18,28 @@ import API from "../../utils/api";
 class Page extends Component {
 state ={
   listings: []
+  // test: 1
 };
-  //function that calls the Api
-  componentDidMount() {
-    this.findAll();
-  }
+ 
   
+//  increaseTest() {
+//    this.setState({test: this.state.test + 1});
+//  };
+
   findAll = () => {
     API.findAll()
-    .then(res =>
+    .then(res => 
       this.setState({ listings: res}),
-      console.log(this.state.listings)
+      console.log("Response of API", this.state.listings)
     )
     .catch(err => console.log(err));
   };
+
+   //function that calls the Api
+   componentDidMount() {
+    this.findAll();
+    // this.increaseTest();
+  }
 
   render() {
     return (
@@ -39,7 +47,7 @@ state ={
         <Wrapper />
         <Cards />
         <Facts />
-        {/* <Map /> */}
+        <Map />
         <Footer />
 
       </div>
