@@ -1,16 +1,22 @@
-import React from 'react';
+import { Component } from 'react';
+import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
 
-// Add the Hits component to our import
-import { InstantSearch, Hits } from 'react-instantsearch-dom';
 
-// [...]
+class Search extends Component {
 
-function Search() {
-  return (
-    <div className="container">
-      <Hits  />
-      {/* <Hits hitComponent={Product} /> */}
-    </div>
-  );
-}
-export default Search;
+    createLeafletElement() {
+      return GeoSearchControl({
+        provider: new OpenStreetMapProvider(),
+        style: 'bar',
+        showMarker: true,
+        showPopup: false,
+        autoClose: true,
+        retainZoomLevel: false,
+        animateZoom: true,
+        keepResult: false,
+        searchLabel: 'search'
+      });
+    }
+  }
+  
+  export default Search;

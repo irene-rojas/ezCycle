@@ -10,7 +10,6 @@ import { InstantSearch,
     Pagination,
     RefinementList
   } from 'react-instantsearch-dom';
-import Search from '../Search';
 
 
 const style = {
