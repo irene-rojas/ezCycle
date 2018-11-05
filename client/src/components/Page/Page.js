@@ -10,7 +10,8 @@ import Carte from "../Carte";
 // //import facts section
 import Facts from "../Facts";
 //import footer section
-import Footer from "../Footer";
+// import Footer from "../Footer";
+import Form from "../Form";
 import Filter from "../Filter";
 
 // import './Page.css';
@@ -27,7 +28,7 @@ class Page extends Component {
         <Facts />
         <Filter/>
         <Carte />
-        <Footer />
+        <Form />
       </div>
     );
   }
