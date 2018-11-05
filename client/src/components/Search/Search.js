@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Add the Hits component to our import
-import { InstantSearch, Hits } from 'react-instantsearch-dom';
+import { Hits } from 'react-instantsearch-dom';
 
 // [...]
 
