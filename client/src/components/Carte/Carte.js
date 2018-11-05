@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
-import L from 'leaflet';
+// import L from 'leaflet';
 
 // import API from "../../utils/API"; //WILL NEED THIS FROM OUR OWN API ONCE SET UP
 // type State = {

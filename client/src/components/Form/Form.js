@@ -24,10 +24,10 @@ const Form = props => (
         <div className="container">
             <div className="row">
                 <div className="col-md-5" id="about-connect">
-                <h2><img className="social" src={recycleicon}></img>&nbsp;ezCycle</h2>
+                <h2><img className="social" src={recycleicon} alt="recycling"></img>&nbsp;ezCycle</h2>
                     <p>ezCycle is an organization committed to helping users find recycling centers near them. We are constantly looking for new facilities and local events. Follow, like, and spread the word about ezCycle!</p>
                     <hr></hr>
-                    <p><img className="social" src={facebook}></img><img className="social" src={instagram}></img><img className="social" src={twitter}></img><img className="social" src={youtube}></img></p>
+                    <p><img className="social" src={facebook} alt="facebook"></img><img className="social" src={instagram}alt="instagram"></img><img className="social" src={twitter} alt="twitter"></img><img className="social" src={youtube}alt="youtube"></img></p>
                 </div>
                 <div className="col-md-5 col-md-offset-1" id="contact-connect">
                     <h2>ADD A FACILITY OR EVENT</h2>
