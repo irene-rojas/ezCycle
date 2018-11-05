@@ -11,6 +11,8 @@ import { InstantSearch,
     RefinementList
   } from 'react-instantsearch-dom';
 import Search from '../Search';
+import ScrollableAnchor from 'react-scrollable-anchor'
+// import Wrapper from "../Wrapper/";
 
 
 const style = {
@@ -64,6 +66,7 @@ const Content = () =>
     
     render(){
         return (
+          <ScrollableAnchor id={'searchBar'}>
     <InstantSearch
     appId="NVBKVUGOH5"
     apiKey="2c6162f5b4b1177a3ba0ac6f74508f03"
@@ -78,6 +81,7 @@ const Content = () =>
 
     {/* Search widgets will go there */}
   </InstantSearch>
+  </ScrollableAnchor>
         )}}
 
  export default Filter;
