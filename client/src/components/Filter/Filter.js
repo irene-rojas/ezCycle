@@ -24,17 +24,17 @@ const Hit = ({hit}) =>
 <img src={hit.image}/>
 </div> */}
 <div className="hit-content">
-<div className="hit-lat">
-{hit.name}
+<div className="hit-item">
+{hit.name} 
 {hit.address}
-{hit.crt}
+ {/* {hit.categories[0]} */}
 </div>
 <div className="hit-name">
-<Highlight attributeName="name" hit={hit}/>
+<Highlight attribute="name" hit={hit}/>
 
 </div>
 <div className="hit-description">
-<Highlight attributeName="description" hit={hit}/>
+<Highlight attribute="categories" hit={hit}/>
 
 </div>
 </div>
@@ -42,8 +42,8 @@ const Hit = ({hit}) =>
 
 const Sidebar = () =>
 <div className="sidebar" style={style}>
-<RefinementList attributeName="rechargeableBatteries"/>
-{/* <RefinementList attributeName="categories"/> */}
+{/* <RefinementList attributeName="rechargeableBatteries"/> */}
+<RefinementList attribute="categories"/>
 </div>
 
 const Content = () =>
