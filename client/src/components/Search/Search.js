@@ -1,6 +1,9 @@
 import { Component } from 'react';
 import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
 
+// Add the Hits component to our import
+import { Hits } from 'react-instantsearch-dom';
+
 
 class Search extends Component {
 
