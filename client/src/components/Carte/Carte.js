@@ -1,12 +1,15 @@
-const mongoose = require("mongoose");
-const Listing = require("./listing");
+import React, { Component } from 'react'
+import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
+import L from 'leaflet';
+// import API from "../../utils/API"; //WILL NEED THIS FROM OUR OWN API ONCE SET UP
+// type State = {
+//   lat: number,
+//   lng: number,
+//   zoom: number,
+// }
 
-mongoose.connect(
-    process.env.MONGODB_URI ||
-    "mongodb://localhost/ezCycleDB", { useNewUrlParser: true }
-  );
 
-const ezCycleSeed = [
+const ezCycleSeeds = [
     {
         // 1
         name: "Household Hazardous Waste & Electronics Collection (City of Alexandria, VA)",
@@ -40,8 +43,7 @@ const ezCycleSeed = [
         tvLCD: true,
         computers: true,
         tabletsPhones: true,
-        wires: true,
-        homeAppliances: false
+        wires: true
     },
     {
         // 3
@@ -54,12 +56,10 @@ const ezCycleSeed = [
         long: -77.271173,
         notes: "No CRT TVs or screens",
         rechargeableBatteries: true,
-        crt: false,
         tvLCD: true,
         computers: true,
         tabletsPhones: true,
-        wires: true,
-        homeAppliances: false
+        wires: true
     },
     {
         // 4
@@ -76,8 +76,7 @@ const ezCycleSeed = [
         tvLCD: true,
         computers: true,
         tabletsPhones: true,
-        wires: true,
-        homeAppliances: false
+        wires: true 
     },
     {
         // 5
@@ -90,8 +89,6 @@ const ezCycleSeed = [
         long: -77.434076,
         notes: " ",
         rechargeableBatteries: true,
-        crt: false,
-        tvLCD: false,
         computers: true,
         tabletsPhones: true,
         wires: true,
@@ -107,12 +104,9 @@ const ezCycleSeed = [
         long: -77.169664,
         notes: "Limit three items per household per day.",
         rechargeableBatteries: true,
-        crt: false,
-        tvLCD: false,
         computers: true,
         tabletsPhones: true,
         wires: true,
-        homeAppliances: false
     },
     {
         // 6
@@ -125,12 +119,9 @@ const ezCycleSeed = [
         long: -77.131091,
         notes: "Limit three items per household per day.",
         rechargeableBatteries: true,
-        crt: false,
-        tvLCD: false,
         computers: true,
         tabletsPhones: true,
         wires: true,
-        homeAppliances: false
     },
     {
         // 7
@@ -143,12 +134,9 @@ const ezCycleSeed = [
         long: -77.050365,
         notes: "Limit three items per household per day.",
         rechargeableBatteries: true,
-        crt: false,
-        tvLCD: false,
         computers: true,
         tabletsPhones: true,
         wires: true,
-        homeAppliances: false
     },
     {
         // 8
@@ -161,12 +149,9 @@ const ezCycleSeed = [
         long: -77.058307,
         notes: "Limit three items per household per day.",
         rechargeableBatteries: true,
-        crt: false,
-        tvLCD: false,
         computers: true,
         tabletsPhones: true,
         wires: true,
-        homeAppliances: false
     },
     {
         // 9
@@ -179,12 +164,9 @@ const ezCycleSeed = [
         long: -77.080347,
         notes: "Limit three items per household per day.",
         rechargeableBatteries: true,
-        crt: false,
-        tvLCD: false,
         computers: true,
         tabletsPhones: true,
         wires: true,
-        homeAppliances: false
     },
     {
         // 10
@@ -197,12 +179,9 @@ const ezCycleSeed = [
         long: -77.033887,
         notes: "Limit three items per household per day.",
         rechargeableBatteries: true,
-        crt: false,
-        tvLCD: false,
         computers: true,
         tabletsPhones: true,
         wires: true,
-        homeAppliances: false
     },
     {
         // 11
@@ -215,12 +194,9 @@ const ezCycleSeed = [
         long: -77.396105,
         notes: "Limit three items per household per day.",
         rechargeableBatteries: true,
-        crt: false,
-        tvLCD: false,
         computers: true,
         tabletsPhones: true,
         wires: true,
-        homeAppliances: false
     },
     {
         // 12
@@ -233,12 +209,9 @@ const ezCycleSeed = [
         long: -77.295141,
         notes: "Limit three items per household per day.",
         rechargeableBatteries: true,
-        crt: false,
-        tvLCD: false,
         computers: true,
         tabletsPhones: true,
         wires: true,
-        homeAppliances: false
     },
     {
         // 13
@@ -254,9 +227,7 @@ const ezCycleSeed = [
         crt: true,
         tvLCD: true,
         computers: true,
-        tabletsPhones: true,
-        wires: false,
-        homeAppliances: false
+        tabletsPhones: true
     },
     {
         // 14
@@ -272,9 +243,7 @@ const ezCycleSeed = [
         crt: true,
         tvLCD: true,
         computers: true,
-        tabletsPhones: true,
-        wires: false,
-        homeAppliances: false
+        tabletsPhones: true
     },
     {
         // 15
@@ -290,9 +259,7 @@ const ezCycleSeed = [
         crt: true,
         tvLCD: true,
         computers: true,
-        tabletsPhones: true,
-        wires: false,
-        homeAppliances: false
+        tabletsPhones: true
     },
     {
         // 16
@@ -308,9 +275,7 @@ const ezCycleSeed = [
         crt: true,
         tvLCD: true,
         computers: true,
-        tabletsPhones: true,
-        wires: false,
-        homeAppliances: false
+        tabletsPhones: true
     },
     {
         // 17
@@ -326,9 +291,7 @@ const ezCycleSeed = [
         crt: true,
         tvLCD: true,
         computers: true,
-        tabletsPhones: true,
-        wires: false,
-        homeAppliances: false
+        tabletsPhones: true
     },
     {
         // 18
@@ -344,9 +307,7 @@ const ezCycleSeed = [
         crt: true,
         tvLCD: true,
         computers: true,
-        tabletsPhones: true,
-        wires: false,
-        homeAppliances: false
+        tabletsPhones: true
     },
     {
         // 19
@@ -399,8 +360,7 @@ const ezCycleSeed = [
         tvLCD: true,
         computers: true,
         tabletsPhones: true,
-        wires: true,
-        homeAppliances: false
+        wires: true
     },
     {
         // 22
@@ -448,13 +408,7 @@ const ezCycleSeed = [
         lat: 38.774256,
         long: -77.175152,
         notes: "1st Level near JC Penny",
-        rechargeableBatteries: false,
-        crt: false,
-        tvLCD: false,
-        computers: false,
         tabletsPhones: true,
-        wires: false,
-        homeAppliances: false
     },
     {
         // 25
@@ -466,13 +420,7 @@ const ezCycleSeed = [
         lat: 38.918059,
         long: -77.221548,
         notes: "Near AMC Theaters",
-        rechargeableBatteries: false,
-        crt: false,
-        tvLCD: false,
-        computers: false,
         tabletsPhones: true,
-        wires: false,
-        homeAppliances: false
     },
     {
         // 26
@@ -484,13 +432,7 @@ const ezCycleSeed = [
         lat: 38.643551,
         long: -77.295376,
         notes: "Near Burlington Coat Factory",
-        rechargeableBatteries: false,
-        crt: false,
-        tvLCD: false,
-        computers: false,
         tabletsPhones: true,
-        wires: false,
-        homeAppliances: false
     },
     {
         // 27
@@ -502,13 +444,7 @@ const ezCycleSeed = [
         lat: 38.648839,
         long: -77.297105,
         notes: "Inside Walmart near GMV exit vestibule",
-        rechargeableBatteries: false,
-        crt: false,
-        tvLCD: false,
-        computers: false,
         tabletsPhones: true,
-        wires: false,
-        homeAppliances: false
     },
     {
         // 28
@@ -520,24 +456,154 @@ const ezCycleSeed = [
         lat: 38.862857,
         long: -77.358770,
         notes: "Near Teavana and AT&T",
-        rechargeableBatteries: false,
-        crt: false,
-        tvLCD: false,
-        computers: false,
         tabletsPhones: true,
-        wires: false,
-        homeAppliances: false
     }
 ];
 
-Listing
-  .remove({})
-  .then(() => Listing.insertMany(ezCycleSeed))
-  .then(data => {
-    console.log(data.result.n + " records inserted!");
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
+export default class Carte extends Component {
+  state = {
+    lat: 38.995719,
+    lng: -77.038405,
+    zoom: 13,
+    ezCycleSeedsArray: ezCycleSeeds //when API is connected, this will 
+  }
+
+
+
+//   componentDidMount() {
+//     //CALL API FUNCTION HERE
+//    
+//     // create the Leaflet map object
+//     // if (!this.state.map) this.init(this._mapNode);
+//   }
+
+//GET MARKERS w/ API CALL HERE
+
+
+//   addGeoJSONLayer(ezCycleSeeds) {
+//     // create a native Leaflet GeoJSON SVG Layer to add as an interactive overlay to the map
+//     // an options object is passed to define functions for customizing the layer
+//     const geojsonLayer = L.geoJson(ezCycleSeeds, {
+//       onEachFeature: this.onEachFeature,
+//       pointToLayer: this.pointToLayer,
+//       filter: this.filterFeatures
+//     });
+//     // add our GeoJSON layer to the Leaflet map object
+//     geojsonLayer.addTo(this.state.map);
+//     // store the Leaflet GeoJSON layer in our component state for use later
+//     this.setState({ geojsonLayer });
+//     // fit the geographic extent of the GeoJSON layer within the map's bounds / viewport
+//     // this.zoomToFeature(geojsonLayer);
+//   }
+
+
+  render() {
+    const position = [this.state.lat, this.state.lng]
+    return (
+        // <div className="leaflet-container">
+      <Map center={position} 
+      zoom={this.state.zoom}
+      style={{height: "700px"}}
+      >
+        <TileLayer
+          url="https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}"
+            attribution='Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
+            maxZoom="18"
+            id= "mapbox.streets"
+            accessToken="pk.eyJ1Ijoibm9taW5iIiwiYSI6ImNqbTk4enhqdTBkazEzcG4xMnF2d2hhMHUifQ.FR4IlfSjVgCaXe4MtqsomQ"
+        />
+        {/* <Marker position={position}>
+          <Popup>
+            A pretty CSS3 popup. <br /> Easily customizable.
+          </Popup>
+        </Marker> */}
+        {/* {API.map(API => (
+            <Marker
+              position={[API.lat, API.long]}
+            //   icon={iconMarker}
+              />))} */}
+        {this.state.ezCycleSeedsArray.map(ezCycleSeed => (
+            <Marker
+              position={[ezCycleSeed.lat, ezCycleSeed.long]}
+            //   icon={iconMarker}
+              >
+              <Popup>
+              {/* <div class="popupDiv">`Bikes Available: {ezCycleSeed.name} Docks Available: {ezCycleSeed.long} `</div> */}
+              <div class="popupDiv" ><b>Name:</b> {ezCycleSeed.name} <br></br>
+              <b>Address:</b> {ezCycleSeed.address}<br></br>
+              <b>Hours:</b> {ezCycleSeed.days}<br></br>
+              <b> Notes:</b> {ezCycleSeed.notes}<br></br>
+              <b>Link:</b> <a href={ezCycleSeed.url} target="blank" >{ezCycleSeed.url}</a></div>
+          </Popup>
+              </Marker>))}
+              
+              
+      </Map>
+    //   </div>
+    )
+  }
+}
+
+
+
+// import React, { Component } from "react";
+// // import { render } from "react-dom";
+// // import { Container } from '../Grid';
+// import { Map, Marker, TileLayer } from "react-leaflet";
+// import "./MapCard.css";
+// import { iconMarker } from "./Icon";
+
+// // const position = [29.131109, -36.311774];
+// class MapCard extends Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       markers: [],
+//       lat: -6.691378,
+//       lng: -18.196010,
+//       zoom: 1.5
+//     };
+//   }
+//   // -6.691378, -18.196010
+//   addMarker = e => {
+//     const { markers } = this.props.friends;
+//     markers.push(e.latlng);
+//     this.setState({ markers });
+//   };
+
+//   render() {
+//     const position = [this.state.lat, this.state.lng];
+//     return (
+//       <div className="leaflet-container">
+//         <Map
+//           center={position}
+//           zoom={this.state.zoom}
+//           style={{ height: "100vh" }}
+//         >
+//           <TileLayer
+//             url="https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}"
+//             attribution="Map data &copy; <a href=&quot;https://www.openstreetmap.org/&quot;>OpenStreetMap</a> contributors, <a href=&quot;https://creativecommons.org/licenses/by-sa/2.0/&quot;>CC-BY-SA</a>, Imagery © <a href=&quot;https://www.mapbox.com/&quot;>Mapbox</a>"
+//             id="mapbox.light"
+//             accessToken=""
+//           />
+          
+//           {/* {this.state.markers.map((position, idx) =>
+//             <Marker key={`marker-${idx}`} position={position} icon={iconMarker}>
+//             </Marker>
+//           )} */}
+          
+//           {this.props.friends.map(friend => (
+//             <Marker
+//               position={[friend.lat, friend.lng]}
+//               icon={iconMarker}
+//             />
+//           ))}
+//         </Map>
+//       </div>
+//     );
+//   }
+// }
+
+// // render(<MapCard />);
+
+// export default MapCard;
