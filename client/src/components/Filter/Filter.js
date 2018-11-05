@@ -25,7 +25,9 @@ const Hit = ({hit}) =>
 </div> */}
 <div className="hit-content">
 <div className="hit-lat">
-${hit.lat}
+{hit.name}
+{hit.address}
+{hit.crt}
 </div>
 <div className="hit-name">
 <Highlight attributeName="name" hit={hit}/>
@@ -40,7 +42,8 @@ ${hit.lat}
 
 const Sidebar = () =>
 <div className="sidebar" style={style}>
-<RefinementList attributeName="categories"/>
+<RefinementList attributeName="rechargeableBatteries"/>
+{/* <RefinementList attributeName="categories"/> */}
 </div>
 
 const Content = () =>
