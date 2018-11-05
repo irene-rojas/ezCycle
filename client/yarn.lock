@@ -5825,6 +5825,11 @@ jsx-ast-utils@^2.0.1:
   dependencies:
     array-includes "^3.0.3"
 
+jump.js@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/jump.js/-/jump.js-1.0.1.tgz#0de2b1631ba9a1c2c6b8572ad277d877e8503600"
+  integrity sha1-DeKxYxupocLGuFcq0nfYd+hQNgA=
+
 kareem@2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/kareem/-/kareem-2.3.0.tgz#ef33c42e9024dce511eeaf440cd684f3af1fc769"
@@ -8441,6 +8446,14 @@ react-scripts@2.0.5:
     workbox-webpack-plugin "3.6.2"
   optionalDependencies:
     fsevents "1.2.4"
+
+react-scrollable-anchor@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/react-scrollable-anchor/-/react-scrollable-anchor-0.6.1.tgz#fd6e78026c744f76414053d06903b82adccb54d9"
+  integrity sha1-/W54Amx0T3ZBQFPQaQO4KtzLVNk=
+  dependencies:
+    jump.js "1.0.1"
+    prop-types "^15.5.10"
 
 react-transition-group@^2.0.0, react-transition-group@^2.2.0:
   version "2.5.0"
