@@ -563,7 +563,7 @@ class Carte extends Component {
           </Popup>
               </Marker>))}
               
-              
+         {/* <Search />      */}
       </Map>
     //   </div>
     )
