@@ -2,45 +2,48 @@
 import React, { Component } from 'react';
 //import wrapper section
 import Wrapper from "../Wrapper";
-// //import cards section
+//import cards section
 import Cards from "../Cards";
-// //import container section
-// import Map from "../Map";
+//import filter
+import Filter from "../Filter";
+//import Form
+import Form from "../Form";
+//import MapCarte section
 import Carte from "../Carte";
-// //import facts section
+//import facts section
 import Facts from "../Facts";
-//import footer section
-import Footer from "../Footer";
+
 import API from "../../utils/api";
+
 
 
 // import './Page.css';
 
 class Page extends Component {
-state ={
-  listings: []
-  // test: 1
-};
+// state ={
+//   listings: []
+//   // test: 1
+// };
  
   
-//  increaseTest() {
-//    this.setState({test: this.state.test + 1});
-//  };
+// //  increaseTest() {
+// //    this.setState({test: this.state.test + 1});
+// //  };
 
-  findAll = () => {
-    API.findAll()
-    .then(res => 
-      this.setState({ listings: res}),
-      console.log("Response of API", this.state.listings)
-    )
-    .catch(err => console.log(err));
-  };
+//   findAll = () => {
+//     API.findAll()
+//     .then(res => 
+//       this.setState({ listings: res}),
+//       console.log("Response of API", this.state.listings)
+//     )
+//     .catch(err => console.log(err));
+//   };
 
-   //function that calls the Api
-   componentDidMount() {
-    this.findAll();
-    // this.increaseTest();
-  }
+//    //function that calls the Api
+//    componentDidMount() {
+//     this.findAll();
+//     // this.increaseTest();
+//   }
 
   render() {
     return (

@@ -1,13 +1,7 @@
 import React, { Component } from 'react'
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
+import API from "../../utils/api";
 // import L from 'leaflet';
-
-// import API from "../../utils/API"; //WILL NEED THIS FROM OUR OWN API ONCE SET UP
-// type State = {
-//   lat: number,
-//   lng: number,
-//   zoom: number,
-// }
 
 
 const ezCycleSeeds = [
@@ -461,13 +455,34 @@ const ezCycleSeeds = [
     }
 ];
 
-export default class Carte extends Component {
-  state = {
+class Carte extends Component {
+ 
+    state = {
     lat: 38.815805,
     lng: -77.138255,
     zoom: 11,
-    ezCycleSeedsArray: ezCycleSeeds //when API is connected, this will 
+    ezCycleSeedsArray: ezCycleSeeds, //when API is connected, this will 
+    listings: []
+}
+
+   //function that calls the Api
+   componentDidMount() {
+    this.findAll();
+    
   }
+
+  findAll = () => {
+    API.findAll()
+    .then(data => {
+        // console.log(data)
+
+      this.setState({ listings: data.data});
+      console.log("Response of API", this.state.listings)
+    }
+    )
+    .catch(err => console.log(err));
+  };
+
 
 
 
@@ -615,4 +630,4 @@ export default class Carte extends Component {
 
 // // render(<MapCard />);
 
-// export default MapCard;
+export default Carte;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Page from '../src/components/Page';
+import Carte from './components/Carte';
 
 const App = () => (
   <Router>
@@ -8,7 +9,8 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={Page} />
         <Route exact path="/listing" component={Page} />
-        <Route exact path="/listing:zipcode" component={Page} />
+        <Route exact path="/listing:zipcode" component={Page} /> 
+        {/* Might need to point the listing zipcodes to component filter */}
       </Switch>
     </div>
   </Router>

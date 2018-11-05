@@ -4,6 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 const router = require("express").Router();
 const db = require("./models");
+const routes = require("./routes");
 
 // Serve Static Assests on build production
 if (process.env.NODE_ENV === "production") {
@@ -27,6 +28,8 @@ app.get("/listing", function (req, res) {
           res.json(err);
       });
 });
+
+// app.use(routes);
 
 // //Routing for API for Listing Front End
 // router.route("/listing").get(findAll(req, res) {
