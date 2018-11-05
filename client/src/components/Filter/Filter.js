@@ -10,10 +10,8 @@ import { InstantSearch,
     Pagination,
     RefinementList
   } from 'react-instantsearch-dom';
-import Search from '../Search';
-import ScrollableAnchor from 'react-scrollable-anchor'
-// import Wrapper from "../Wrapper/";
 
+import ScrollableAnchor from 'react-scrollable-anchor'
 
 const style = {
     width: "50px",
