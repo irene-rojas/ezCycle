@@ -25,7 +25,7 @@ const Facts = () => (
                     <br></br>
                     <div className="row">
                     <div className="col-md-2">
-                    <img className="icons" src={icon12} alt="leaf in house"></img>
+                    <img className="icons" src={icon12} alt="house"></img>
                     </div>
                     <div className="col-md-10">
                     <p id="facts-list">Recycling one million laptops saves the energy equivalent to the electricity used by <span className="orangeText">3,657</span> U.S. homes in a year.</p>
@@ -54,7 +54,7 @@ const Facts = () => (
 
                 </div>
                 <div className="col-md-5" id="facts-image">
-                <img className="world img-responsive" src={world2} alt="big globe"></img>
+                <img className="world img-responsive" src={world2} alt="world"></img>
                     
 
 
