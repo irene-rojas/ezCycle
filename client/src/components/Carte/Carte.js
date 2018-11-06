@@ -33,6 +33,7 @@ class Carte extends Component {
             <div className="leaflet-container" style={{backgroundColor:"rgba(245, 245, 245, 0.966);"}}>
             <Map center={position} 
             zoom={this.state.zoom}
+
             style={{height: "500px",
             width: "70%",
             margin: "0px auto"}}
