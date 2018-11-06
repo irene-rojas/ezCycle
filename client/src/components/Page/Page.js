@@ -23,7 +23,7 @@ class Page extends Component {
         <Cards />
         <Facts />
         <Filter/>
-        <Carte />
+        {/* <Carte /> */}
         <Form />
       </div>
     );
