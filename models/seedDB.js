@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const db = require("../models");
+const Listing = require("./listing");
 
 mongoose.connect(
     process.env.MONGODB_URI ||
@@ -530,9 +530,9 @@ const ezCycleSeed = [
     }
 ];
 
-db.Listing
+Listing
   .remove({})
-  .then(() => db.Listing.collection.insertMany(ezCycleSeed))
+  .then(() => Listing.insertMany(ezCycleSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
