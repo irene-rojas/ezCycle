@@ -10,13 +10,15 @@ import { InstantSearch,
     Pagination,
     RefinementList
   } from 'react-instantsearch-dom';
+  import "./Filter.css";
 
-import ScrollableAnchor from 'react-scrollable-anchor'
 
-const style = {
-    width: "50px",
-    height: "50px"
-  };
+// import ScrollableAnchor from 'react-scrollable-anchor'
+
+// const style = {
+//     width: "50px",
+//     height: "50px"
+//   };
 
 const Hit = ({hit}) =>
 <div className="hit">
@@ -27,6 +29,7 @@ const Hit = ({hit}) =>
 <div className="hit-item">
 {hit.name} 
 {hit.address}
+{hit.computers}
  {/* {hit.categories[0]} */}
 </div>
 <div className="hit-name">
@@ -41,7 +44,8 @@ const Hit = ({hit}) =>
 </div>
 
 const Sidebar = () =>
-<div className="sidebar" style={style}>
+<div className="sidebar">
+{/* <div className="sidebar" style={style}> */}
 {/* <RefinementList attributeName="rechargeableBatteries"/> */}
 <RefinementList attribute="categories"/>
 </div>
@@ -53,6 +57,7 @@ const Content = () =>
 
 </div>
 <Hits hitComponent={Hit}/>
+{console.log(`big Hits ${Hits}`)};
 <div className="pagination">
 <Pagination showLast/>
 </div>
@@ -60,26 +65,29 @@ const Content = () =>
 
 
 
- class Filter extends Component {
-    
+class Filter extends Component {
+  
     render(){
-        return (
-          <ScrollableAnchor id={'searchBar'}>
+      return (
+        <ScrollableAnchor id={'searchBar'}>
     <InstantSearch
     appId="NVBKVUGOH5"
     apiKey="2c6162f5b4b1177a3ba0ac6f74508f03"
     indexName="recyclingTest"
-  >
+    >
   <SearchBox translations={{placeholder:'Find a Center'}}/>
-  <main>
+     
       <Sidebar/>
+  <main>
       <Content />
       </main>
   {/* <Search /> */}
 
     {/* Search widgets will go there */}
   </InstantSearch>
+  {console.log(`this is ${Hit}`)};
   </ScrollableAnchor>
+  
         )}}
 
  export default Filter;

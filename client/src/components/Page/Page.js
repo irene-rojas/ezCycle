@@ -12,7 +12,7 @@ import Facts from "../Facts";
 //import footer section
 // import Footer from "../Footer";
 import Form from "../Form";
-import Filter from "../Filter";
+// import Filter from "../Filter";
 
 // import './Page.css';
 
@@ -26,7 +26,7 @@ class Page extends Component {
         <Wrapper />
         <Cards />
         <Facts />
-        <Filter/>
+        {/* <Filter/> */}
         <Carte />
         <Form />
       </div>

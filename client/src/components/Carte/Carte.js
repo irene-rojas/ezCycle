@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
 // import L from 'leaflet';
+import Filter from "../Filter";
 
 
 // import API from "../../utils/API"; //WILL NEED THIS FROM OUR OWN API ONCE SET UP
@@ -467,7 +468,7 @@ export default class Carte extends Component {
     lat: 38.815805,
     lng: -77.138255,
     zoom: 11,
-    ezCycleSeedsArray: ezCycleSeeds //when API is connected, this will 
+    // ezCycleSeedsArray: ezCycleSeeds //when API is connected, this will 
   }
 
 
@@ -502,10 +503,13 @@ export default class Carte extends Component {
   render() {
     const position = [this.state.lat, this.state.lng]
     return (
-        // <div className="leaflet-container">
-      <Map center={position} 
+        <div className="leaflet-container">
+        <Filter/>
+      {/* <Map center={position} 
       zoom={this.state.zoom}
-      style={{height: "700px"}}
+      style={{height: "500px",
+      width: "70%",
+      margin: "0px auto"}}
       >
 
         <TileLayer
@@ -514,7 +518,7 @@ export default class Carte extends Component {
             maxZoom="18"
             id= "mapbox.streets"
             accessToken="pk.eyJ1Ijoibm9taW5iIiwiYSI6ImNqbTk4enhqdTBkazEzcG4xMnF2d2hhMHUifQ.FR4IlfSjVgCaXe4MtqsomQ"
-        />
+        /> */}
         {/* <Marker position={position}>
           <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
@@ -525,15 +529,17 @@ export default class Carte extends Component {
               position={[API.lat, API.long]}
             //   icon={iconMarker}
               />))} */}
-        {this.state.ezCycleSeedsArray.map(ezCycleSeed => (
-            <Marker
-              position={[ezCycleSeed.lat, ezCycleSeed.long]}
-            //   icon={iconMarker}
-              >
-              <Popup>
+        {/* {this.state.ezCycleSeedsArray.map(ezCycleSeed => ( */}
+            {/* <Marker
+            //   position={[ezCycleSeed.lat, ezCycleSeed.long]}
+              position={[Filter.hit._geoloc.lat, Filter.hit._geoloc.lng]}
+              //   icon={iconMarker}
+              > */}
+              {console.log(Filter.Hit)};
+              {/* <Popup> */}
               {/* <div class="popupDiv">`Bikes Available: {ezCycleSeed.name} Docks Available: {ezCycleSeed.long} `</div> */}
-              <div class="popupDiv" >
-              <b>Name:</b> {ezCycleSeed.name} <br></br>
+              {/* <div class="popupDiv" > */}
+              {/* <b>Name:</b> {ezCycleSeed.name} <br></br>
               <b>Address:</b> {ezCycleSeed.address}<br></br>
               <b>Hours:</b> {ezCycleSeed.days}<br></br>
               <b>Notes:</b> {ezCycleSeed.notes}<br></br>
@@ -545,13 +551,15 @@ export default class Carte extends Component {
               Wires: {ezCycleSeed.wires ? "Yes" : "No"}<br></br>
               Cathode Ray Tubes: {ezCycleSeed.crt ? "Yes" : "No"}<br></br>
               Home Appliances: {ezCycleSeed.homeAppliances ? "Yes" : "No"}<br></br>
-              <b><a href={ezCycleSeed.url} target="blank" >Visit site</a></b></div>
-          </Popup>
-              </Marker>))}
+              <b><a href={ezCycleSeed.url} target="blank" >Visit site</a></b> */}
+              {/* </div> */}
+          {/* </Popup> */}
+              {/* </Marker> */}
+            {/* ))} */}
               
          {/* <Search />      */}
-      </Map>
-    //   </div>
+      {/* </Map> */}
+     </div>
     )
   }
 }
