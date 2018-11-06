@@ -34,7 +34,7 @@ const Hit = ({hit}) =>
 <div className="leaflet-container" style={{backgroundColor:"rgba(245, 245, 245, 0.966);"}}>
             <Map center={[hit._geoloc.lat, hit._geoloc.lng]} 
             zoom="11"
-            style={{height: "500px",
+            style={{height: "400px",
             width: "100%",
             }}
             >
@@ -55,13 +55,13 @@ const Hit = ({hit}) =>
                                 <b>Hours:</b> {hit.days}<br></br>
                                 <b>Notes:</b> {hit.notes}<br></br>
                                 <b>Recycles:</b> <br></br>
-                                Rechargeable Batteries: {hit.rechargeableBatteries ? "Yes" : "No"}<br></br>
-                                Phones + Tablets: {hit.tabletsPhones ? "Yes" : "No"}<br></br>
-                                LCD Screens: {hit.tvLCD ? "Yes" : "No"}<br></br>
-                                Computers: {hit.computers ? "Yes" : "No"}<br></br>
-                                Wires: {hit.wires ? "Yes" : "No"}<br></br>
-                                Cathode Ray Tubes: {hit.crt ? "Yes" : "No"}<br></br>
-                                Home Appliances: {hit.homeAppliances ? "Yes" : "No"}<br></br>
+                                Rechargeable Batteries: {hit.rechargeableBatteries ? "✅" : "🚫"}<br></br>
+                                Phones + Tablets: {hit.tabletsPhones ? "✅" : "🚫"}<br></br>
+                                LCD Screens: {hit.tvLCD ?  "✅" : "🚫"}<br></br>
+                                Computers: {hit.computers ?  "✅" : "🚫"}<br></br>
+                                Wires: {hit.wires ? "✅" : "🚫"}<br></br>
+                                Cathode Ray Tubes: {hit.crt ?  "✅" : "🚫"}<br></br>
+                                Home Appliances: {hit.homeAppliances ?  "✅" : "🚫"}<br></br>
                                 <b><a href={hit.url} target="blank" >Visit site</a></b></div>
                         </Popup>
                     </Marker>
