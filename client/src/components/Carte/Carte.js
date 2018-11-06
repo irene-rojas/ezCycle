@@ -30,11 +30,12 @@ class Carte extends Component {
     render() {
         const position = [this.state.lat, this.state.lng]
         return (
-            // <div className="leaflet-container">
-            <Map
-                center={position}
-                zoom={this.state.zoom}
-                style={{ height: "700px" }}
+            <div className="leaflet-container" style={{backgroundColor:"rgba(245, 245, 245, 0.966);"}}>
+            <Map center={position} 
+            zoom={this.state.zoom}
+            style={{height: "500px",
+            width: "70%",
+            margin: "0px auto"}}
             >
 
                 <TileLayer
@@ -66,8 +67,9 @@ class Carte extends Component {
                         </Popup>
                     </Marker>))}
 
-                {/* <Search />      */}
+               
             </Map>
+            </div>
         )
     }
 }
