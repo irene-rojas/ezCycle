@@ -31,10 +31,11 @@ class Carte extends Component {
         const position = [this.state.lat, this.state.lng]
         return (
             // <div className="leaflet-container">
-            <Map
-                center={position}
-                zoom={this.state.zoom}
-                style={{ height: "700px" }}
+            <Map center={position} 
+            zoom={this.state.zoom}
+            style={{height: "500px",
+            width: "70%",
+            margin: "0px auto"}}
             >
 
                 <TileLayer
