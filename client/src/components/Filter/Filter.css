@@ -4,12 +4,48 @@
 
 .hit-item {
     font-size: 15px !important;
+    /* background-color: aqua !important; */
+    color: rgb(91, 91, 91) !important;
+}
+
+span.ais-RefinementList-count {
+    font-size: 15px !important;
+}
+
+a.ais-Pagination-link--selected {
+    /* background-color: rgb(194, 192, 192) !important; */
+    background-color: rgba(245, 245, 245, 0.966) !important;
+
+}
+
+a {
+    color: rgb(15, 160, 160) !important;
 }
 
 .ais-SearchBox-input {
     font-size: 20px !important;
+    color: rgb(91, 91, 91) !important;
+    background-color: rgba(245, 245, 245, 0.966) !important;
+    width: 50% !important;
+    margin: 0px auto !important;
 }
 
 .sidebar {
-    background-color: "blue" !important;
+    background-color: rgba(221, 221, 221, 0.966) !important;
+    /* color: red !important; */
+}
+
+.ais-RefinementList-item {
+    background-color: rgba(221, 221, 221, 0.966) !important;
+
+    color: rgb(91, 91, 91) !important;
+}
+
+.ais-SearchBox-form {
+    background-color: rgba(245, 245, 245, 0.966)!important;
+    color: rgb(15, 160, 160) !important;
+}
+
+.content {
+    background-color:rgba(245, 245, 245, 0.966) !important;
 }
