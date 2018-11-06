@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
 import { InstantSearch, 
     SearchBox, 
     Hits, 
@@ -9,13 +10,11 @@ import { InstantSearch,
     Pagination,
     RefinementList
   } from 'react-instantsearch-dom';
+  import "./Filter.css";
+
 
 import ScrollableAnchor from 'react-scrollable-anchor'
 
-const style = {
-    width: "50px",
-    height: "50px"
-  };
 
 const Hit = ({hit}) =>
 <div className="hit">
@@ -23,25 +22,26 @@ const Hit = ({hit}) =>
 <img src={hit.image}/>
 </div> */}
 <div className="hit-content">
+<a href={hit.url} target="blank" ></a>
 <div className="hit-item">
-{hit.name} 
-{hit.address}
- {/* {hit.categories[0]} */}
-</div>
-<div className="hit-name">
-<Highlight attribute="name" hit={hit}/>
+<b>{hit.name}</b><br></br>
+{hit.address}<br></br>
+{/*{hit.url}<br></br>*/}
+<b><a href={hit.url} target="blank" >Visit site</a></b>
 
+</div>
+{/* <div className="hit-name">
+<Highlight attribute="name" hit={hit}/>
 </div>
 <div className="hit-description">
 <Highlight attribute="categories" hit={hit}/>
 
-</div>
-</div>
+</div>*/}
+</div> 
 </div>
 
 const Sidebar = () =>
-<div className="sidebar" style={style}>
-{/* <RefinementList attributeName="rechargeableBatteries"/> */}
+<div className="sidebar">
 <RefinementList attribute="categories"/>
 </div>
 
@@ -59,26 +59,25 @@ const Content = () =>
 
 
 
- class Filter extends Component {
-    
+class Filter extends Component {
+  
     render(){
-        return (
-          <ScrollableAnchor id={'searchBar'}>
+      return (
+        <ScrollableAnchor id={'searchBar'}>
     <InstantSearch
     appId="NVBKVUGOH5"
     apiKey="2c6162f5b4b1177a3ba0ac6f74508f03"
     indexName="recyclingTest"
-  >
+    >
   <SearchBox translations={{placeholder:'Find a Center'}}/>
-  <main>
+     
       <Sidebar/>
+  <main>
       <Content />
       </main>
-  {/* <Search /> */}
-
-    {/* Search widgets will go there */}
   </InstantSearch>
-  </ScrollableAnchor>
+   </ScrollableAnchor>
+  
         )}}
 
  export default Filter;
