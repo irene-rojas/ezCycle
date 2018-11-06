@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Page from '../src/components/Page';
 
-
-
-class App extends Component {
-  
-  render() { //part of Component
-    return (
-      <Page />
-    );
-  }
-}
+const App = () => (
+  <Router>
+    <div>
+      <Switch>
+        <Route exact path="/" component={Page} />
+        <Route exact path="/listing" component={Page} />
+      </Switch>
+    </div>
+  </Router>
+);
 
 export default App;

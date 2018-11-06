@@ -2,23 +2,19 @@
 import React, { Component } from 'react';
 //import wrapper section
 import Wrapper from "../Wrapper";
-// //import cards section
+//import cards section
 import Cards from "../Cards";
-// //import container section
-// import Map from "../Map";
-import Carte from "../Carte";
-// //import facts section
-import Facts from "../Facts";
-//import footer section
-// import Footer from "../Footer";
-import Form from "../Form";
+//import filter
 import Filter from "../Filter";
-
+//import Form
+import Form from "../Form";
+//import MapCarte section
+import Carte from "../Carte";
+//import facts section
+import Facts from "../Facts";
 // import './Page.css';
 
 class Page extends Component {
-
-
 
   render() {
     return (
