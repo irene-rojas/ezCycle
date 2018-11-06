@@ -11,13 +11,16 @@ import { InstantSearch,
     RefinementList
   } from 'react-instantsearch-dom';
   import "./Filter.css";
+
   import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
 
 
 
 import ScrollableAnchor from 'react-scrollable-anchor'
 
+
 let geoloc = [];
+
 
 const Hit = ({hit}) =>
 //state {}
@@ -99,6 +102,7 @@ const Content = () =>
 
 
 class Filter extends Component {
+
 //   state = {
 //     lat: 38.815805,
 //     lng: -77.138255,
@@ -107,15 +111,18 @@ class Filter extends Component {
 // }
     render(){
       // const position = [this.state.lat, this.state.lng]
+
       return (
         <ScrollableAnchor id={'searchBar'}>
     <InstantSearch
     appId="NVBKVUGOH5"
     apiKey="2c6162f5b4b1177a3ba0ac6f74508f03"
+
     indexName="dev_recycling"
     >
   <SearchBox translations={{placeholder:'Find a Center'}}/>
   
+
 
       <Sidebar/>
   <main>
