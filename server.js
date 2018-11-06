@@ -2,9 +2,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const router = require("express").Router();
 const db = require("./models");
-const routes = require("./routes");
 
 // Serve Static Assests on build production
 if (process.env.NODE_ENV === "production") {
@@ -29,23 +27,6 @@ app.get("/listing", function (req, res) {
       });
 });
 
-// app.use(routes);
-
-// //Routing for API for Listing Front End
-// router.route("/listing").get(findAll(req, res) {
-//     db.Listing.find(req.query)
-//       .then(listingData => res.json(listingData))
-//       .catch(err => res.status(422).json(err))
-// });
-
-// // Matches with "/listing/:zipcode"
-// router.route("/listing/:zipcode").get(findByZipCode(req, res) {
-//     db.Listing.findById(req.params.zipCode)
-//       .then(listingData => res.json(listingData))
-//       .catch(err => res.status(422).json(err))
-  
-// });
-  
 //Server Start and Listen Verification
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, function () {

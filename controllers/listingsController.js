@@ -8,10 +8,4 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }
-//   findByZipCode: function(req, res) {
-//     db.Listing
-//       .findById(req.params.zipCode)
-//       .then(dbModel => res.json(dbModel))
-//       .catch(err => res.status(422).json(err));
-//   }
 };
